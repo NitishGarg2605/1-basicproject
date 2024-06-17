@@ -1,0 +1,242 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body,html{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-rows: 25% 50% 25%;
+    grid-template-columns: 25% 25% 50%;
+    position: relative;
+}
+
+#lefttopleft{
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 2vw;
+}
+#square{
+    height: 20px;
+    width: 20px;
+    rotate: 45deg;
+    background-color: black;
+}
+
+#lefttopright{
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-right: 2vw;
+}
+#menubar{
+    opacity: 0;
+}
+ul{
+    width: 100%;
+    list-style-type: none;
+}
+
+h1{
+    width: 100%;
+    text-align: right;
+    margin-bottom: 2.2vw;
+    font-size: 1.2vw;
+}
+
+li{
+    
+        width: 100%;
+        text-align: right;
+}
+
+
+#leftcentre{
+    background-color:pink;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 100%;
+    width: 100%;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    padding-right: 6vw;
+    padding-left: 8vw;
+}
+#leftcentre p{
+    width: 100%;
+    font-size: 4vw;
+}
+#leftcentre p:nth-child(2n+1){
+    text-align: start;
+}
+#leftcentre p:nth-child(2n+2){
+    text-align: center;
+}
+#leftbottom{
+    background-color:blueviolet;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    padding-right: 20vw;
+    padding-left: 2vw;
+}
+
+
+#right{
+    background-color: navy;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    padding-right: 10vw;
+    padding-left: 2vw;
+    height: 100%;
+    width: 100%;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#arrow{
+    background-color: orangered;
+    padding: 1vw;
+    height: 5vw;
+    width: 5vw;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+}
+
+#arrow span{
+    color: white;
+    font-size: 3vw;
+    
+}
+
+
+@media(max-width:400px){
+    #main{
+        
+        grid-template-rows: 10% 25% 15% 45%;
+        grid-template-columns: 50% 50%;
+        position: relative;
+    }
+    
+
+    #square{
+        height: 2vw;
+        width: 2vw;
+      
+    }
+    
+    #menubar{
+        width: 100%;
+        text-align: right;
+        opacity: 1;
+    }
+    
+    ul{
+        opacity: 0;
+        width: 100%;
+        list-style-type: none;
+    }
+    
+    h1{
+        width: 100%;
+        text-align: right;
+        margin-bottom: 2.2vw;
+        font-size: 3.2vw;
+    }
+    
+   
+    
+    #leftcentre{
+      
+        height: 100%;
+        width: 100%;
+        padding-top: 10vw;
+        padding-bottom: 10vw;
+        padding-right: 27vw;
+        padding-left: 27vw;
+    }
+   
+    
+    #leftbottom{
+        background-color:blueviolet;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+        padding-right: 2vw;
+        padding-left: 2vw;
+    }
+    
+    
+    #right{
+        background-color: navy;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        padding-top: 5vw;
+        padding-bottom: 2vw;
+        padding-left: 20vw;
+        padding-right: 20vw;
+       
+    }
+    
+ 
+    
+    #arrow{
+        rotate: 90deg;
+        background-color: orangered;
+        padding: 0.8vw;
+        height: 5vw;
+        width: 5vw;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+    }
+    
+    #arrow span{
+        color: white;
+        font-size: 3vw;
+        
+    }
+    
+
+
+}
